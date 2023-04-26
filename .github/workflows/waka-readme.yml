@@ -24,7 +24,7 @@ jobs:
           npm install
 
       - name: Generate WakaTime stats
-        run: npx waka-readme-stats --output README.md
+        run: npx wakatime --output README.md
 
       - name: Add GitHub Readme Stats for WakaTime
         run: |

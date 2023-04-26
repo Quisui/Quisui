@@ -16,42 +16,12 @@ Here are some ideas to get you started:
 -->
 
 <!--START_SECTION:waka-->
-
-```text
-From: 12 April 2022 - To: 25 April 2023
-
-Total Time: 777 hrs 28 mins
-
-PHP              373 hrs 13 mins 
-
-
-
-
-
-
-
-
-
-
-
-<<<<<<<<<<<<<   48.00 %
-JavaScript       138 hrs 15 mins 
-
-
-
-i<<<<<<<<<<<<<<<<<<<<   17.78 %
-ASP.NET          85 hrs 27 mins  
-
-u<<<<<<<<<<<<<<<<<<<<<<   10.99 %
-Vue.js           63 hrs 11 mins  
-
--<<<<<<<<<<<<<<<<<<<<<<   08.13 %
-Blade Template   26 hrs 40 mins  h<<<<<<<<<<<<<<<<<<<<<<<<   03.43 %
-VB.NET           16 hrs 22 mins  Q<<<<<<<<<<<<<<<<<<<<<<<<   02.11 %
-Bash             12 hrs 31 mins  /<<<<<<<<<<<<<<<<<<<<<<<<   01.61 %
-Docker           12 hrs 13 mins  a<<<<<<<<<<<<<<<<<<<<<<<<   01.57 %
-YAML             11 hrs 47 mins  s<<<<<<<<<<<<<<<<<<<<<<<<   01.52 %
-Other            10 hrs 59 mins  /<<<<<<<<<<<<<<<<<<<<<<<<   01.41 %
-```
-
+[![WakaTime stats](https://github-readme-stats.vercel.app/api/wakatime?username=Quisui&theme=vue&langs_count=10)](https://wakatime.com/@Quisui)
+<!--END_SECTION:waka-->
+<!--START_SECTION:top_lang-->
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Quisui&hide=css,html&langs_count=6&theme=vue)](https://github.com/Quisui)
+<!--END_SECTION:top_lang-->
+<!--START_SECTION:github_stats-->
+[![Quisui's github stats](https://github-readme-stats.vercel.app/api?username=Quisui&show_icons=true&theme=vue)](https://github.com/Quisui)
+<!--END_SECTION:github_stats-->
 <!--END_SECTION:waka-->

@@ -11,12 +11,38 @@ jobs:
     name: WakaReadme DevMetrics
     runs-on: ubuntu-latest
     steps:
-      - uses: athul/waka-readme@master
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Update README
+        uses: athul/waka-readme@master
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
-          GITHUB_TOKEN: ${{ github.token }}
           SHOW_TITLE: true
+          BLOCKS: ->
           TIME_RANGE: all_time
           SHOW_TIME: true
           SHOW_MASKED_TIME: true
           LANG_COUNT: 10
+
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v7
+        with:
+          author_name: "WakaTime"
+          author_email: "github-action@wakatime.com"
+          message: "Update README with WakaTime metrics"
+          add: README.md
+          signoff: true
+
+      - name: Push changes
+        uses: EndBug/push@v2
+        with:
+          branch: main

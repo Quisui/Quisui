@@ -1,40 +1,31 @@
-name: Update WakaTime stats
+name: Waka Readme
 
 on:
   push:
     branches:
       - master
+  workflow_dispatch:
   schedule:
+    # Runs at 12am UTC
     - cron: "0 0 * * *"
 
 jobs:
   update-readme:
+    name: WakaReadme DevMetrics
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
+      - uses: athul/waka-readme@master
         with:
-          node-version: 14.x
-
-      - name: Install dependencies
-        run: |
-              npm install
-              npm install @athul/waka-readme-stats
-      - name: Generate WakaTime stats
-        run: npx @athul/waka-readme-stats --output README.md
-
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+          SHOW_TITLE: true
+          BLOCKS: ->
+          TIME_RANGE: all_time
+          SHOW_TIME: true
+          SHOW_MASKED_TIME: true
+          LANG_COUNT: 10
       - name: Add GitHub Readme Stats for WakaTime
         run: |
           sed -i 's#<!--START_SECTION:waka-->.*<!--END_SECTION:waka-->#<!--START_SECTION:waka-->[![WakaTime stats](https://github-readme-stats.vercel.app/api/wakatime?username=Quisui&theme=vue&langs_count=10)](https://wakatime.com/@Quisui)<!--END_SECTION:waka-->#' README.md
-
       - name: Add GitHub Top Languages for WakaTime
         run: |
           sed -i 's#<!--START_SECTION:top_lang-->.*<!--END_SECTION:top_lang-->#<!--START_SECTION:top_lang-->[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Quisui&hide=css,html&langs_count=6&theme=vue)](https://github.com/Quisui)<!--END_SECTION:top_lang-->#' README.md
-      - name: Commit and push changes
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
-          publish_branch: gh-pages

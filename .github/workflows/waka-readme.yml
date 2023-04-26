@@ -19,10 +19,11 @@ jobs:
           node-version: 14.x
 
       - name: Install dependencies
-        run: npm install
-
+        run: |
+              npm install
+              npm install @athul/waka-readme-stats
       - name: Generate WakaTime stats
-        run: npx waka-readme-stats --output README.md
+        run: npx @athul/waka-readme-stats --output README.md
 
       - name: Add GitHub Readme Stats for WakaTime
         run: |

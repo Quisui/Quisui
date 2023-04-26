@@ -16,11 +16,22 @@ Here are some ideas to get you started:
 -->
 
 <!--START_SECTION:waka-->
-<p align="left">
-  <a href="https://wakatime.com/@_Tato">
-    <img width = "525" src="https://github-readme-stats.vercel.app/api/wakatime?username=Quisui&theme=vue&langs_count=10"/>
-  </a>
-  <a href="https://github.com/anuraghazra/convoychat">
-    <img width = "314" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Quisui&hide=css,html&langs_count=6&theme=vue" /> 
-  </>
+
+```text
+From: 12 April 2022 - To: 25 April 2023
+
+Total Time: 777 hrs 28 mins
+
+PHP              373 hrs 13 mins ████████████░░░░░░░░░░░░░   48.00 %
+JavaScript       138 hrs 15 mins ████▒░░░░░░░░░░░░░░░░░░░░   17.78 %
+ASP.NET          85 hrs 27 mins  ██▓░░░░░░░░░░░░░░░░░░░░░░   10.99 %
+Vue.js           63 hrs 11 mins  ██░░░░░░░░░░░░░░░░░░░░░░░   08.13 %
+Blade Template   26 hrs 40 mins  █░░░░░░░░░░░░░░░░░░░░░░░░   03.43 %
+VB.NET           16 hrs 22 mins  ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.11 %
+Bash             12 hrs 31 mins  ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.61 %
+Docker           12 hrs 13 mins  ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.57 %
+YAML             11 hrs 47 mins  ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.52 %
+Other            10 hrs 59 mins  ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.41 %
+```
+
 <!--END_SECTION:waka-->

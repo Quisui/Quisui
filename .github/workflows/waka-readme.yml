@@ -1,5 +1,4 @@
 name: Update WakaTime stats
-
 on:
   push:
     branches:
@@ -29,10 +28,3 @@ jobs:
 
       - name: Add top languages
         run: sed -i 's|<!--START_SECTION:top-langs-->.*<!--END_SECTION:top-langs-->|'"$(curl -s https://github-readme-stats.vercel.app/api/top-langs/?username=Quisui&hide=css,html&langs_count=6&theme=vue)"'|' README.md
-
-      - name: Commit and push changes
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
-          publish_branch: gh-pages

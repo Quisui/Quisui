@@ -25,7 +25,7 @@ jobs:
           LANG_COUNT: 10
       - name: Add GitHub Readme Stats for WakaTime
         run: |
-          sed -i 's#<!--START_SECTION:waka-->.*<!--END_SECTION:waka-->#<!--START_SECTION:waka-->[![WakaTime stats](https://github-readme-stats.vercel.app/api/wakatime?username=Quisui&theme=vue&langs_count=10)](https://wakatime.com/@Quisui)<!--END_SECTION:waka-->#' README.md
+          sed -i 's#<!--START_SECTION:waka-->.*<!--END_SECTION:waka-->#<!--START_SECTION:waka-->[![WakaTime stats](https://github-readme-stats.vercel.app/api/wakatime?username=Quisui&theme=vue&langs_count=10)](https://wakatime.com/@Quisui)<!--END_SECTION:waka-->#' ./README.md
       - name: Add GitHub Top Languages for WakaTime
         run: |
-          sed -i 's#<!--START_SECTION:top_lang-->.*<!--END_SECTION:top_lang-->#<!--START_SECTION:top_lang-->[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Quisui&hide=css,html&langs_count=6&theme=vue)](https://github.com/Quisui)<!--END_SECTION:top_lang-->#' README.md
+          sed -i 's#<!--START_SECTION:top_lang-->.*<!--END_SECTION:top_lang-->#<!--START_SECTION:top_lang-->[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Quisui&hide=css,html&langs_count=6&theme=vue)](https://github.com/Quisui)<!--END_SECTION:top_lang-->#' ./README.md

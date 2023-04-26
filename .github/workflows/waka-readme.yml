@@ -1,0 +1,35 @@
+name: Update WakaTime stats
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Generate WakaTime stats
+        run: npx waka-readme-stats --output README.md
+
+      - name: Add GitHub Readme Stats for WakaTime
+        run: sed -i 's|<!--START_SECTION:waka-->.*<!--END_SECTION:waka-->|'"$(curl -s https://raw.githubusercontent.com/Quisui/Quisui/main/profile-summary-card-output/default/0-profile-details.svg)"'|' README.md
+
+      - name: Add top languages
+        run: sed -i 's|<!--START_SECTION:top-langs-->.*<!--END_SECTION:top-langs-->|'"$(curl -s https://github-readme-stats.vercel.app/api/top-langs/?username=Quisui&hide=css,html&langs_count=6&theme=vue)"'|' README.md
+
+      - name: Commit and push changes
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
+          publish_branch: gh-pages

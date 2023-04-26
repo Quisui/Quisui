@@ -23,7 +23,7 @@ jobs:
 
       - name: Generate WakaTime stats
         run: npx waka-readme-stats --output README.md
-      
+
       - name: Add GitHub Readme Stats for WakaTime
         run: |
           sed -i 's#<!--START_SECTION:waka-->.*<!--END_SECTION:waka-->#<!--START_SECTION:waka-->[![WakaTime stats](https://github-readme-stats.vercel.app/api/wakatime?username=Quisui&theme=vue&langs_count=10)](https://wakatime.com/@Quisui)<!--END_SECTION:waka-->#' README.md

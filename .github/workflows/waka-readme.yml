@@ -18,6 +18,10 @@ jobs:
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
           SHOW_TITLE: true
+          TIME_RANGE: all_time
+          SHOW_TIME: true
+          SHOW_MASKED_TIME: true
+          LANG_COUNT: 10
           BLOCKS: |
             <!--START_SECTION:waka-->
             [![WakaTime stats](https://github-readme-stats.vercel.app/api/wakatime?username=Quisui&theme=vue&langs_count=10)](https://wakatime.com/@Quisui)

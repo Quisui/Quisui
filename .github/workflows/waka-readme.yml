@@ -1,7 +1,8 @@
 name: Update WakaTime stats
+
 on:
   push:
-    branches:
+    branches: 
       - master
   schedule:
     - cron: "0 0 * * *"
@@ -18,16 +19,17 @@ jobs:
           node-version: 14.x
 
       - name: Install dependencies
-        run: npm install
-        
-      - name: INstall waka
-        run: npm install -g waka-readme-stats
+        run: |
+          npm install waka-readme-stats
+          npm install
 
       - name: Generate WakaTime stats
         run: npx waka-readme-stats --output README.md
 
       - name: Add GitHub Readme Stats for WakaTime
-        run: sed -i 's|<!--START_SECTION:waka-->.*<!--END_SECTION:waka-->|'"$(curl -s https://raw.githubusercontent.com/Quisui/Quisui/main/profile-summary-card-output/default/0-profile-details.svg)"'|' README.md
+        run: |
+          sed -i 's#<!--START_SECTION:waka-->.*<!--END_SECTION:waka-->#<!--START_SECTION:waka-->[![WakaTime stats](https://github-readme-stats.vercel.app/api/wakatime?username=Quisui&theme=vue&langs_count=10)](https://wakatime.com/@Quisui)<!--END_SECTION:waka-->#' README.md
 
-      - name: Add top languages
-        run: sed -i 's|<!--START_SECTION:top-langs-->.*<!--END_SECTION:top-langs-->|'"$(curl -s https://github-readme-stats.vercel.app/api/top-langs/?username=Quisui&hide=css,html&langs_count=6&theme=vue)"'|' README.md
+      - name: Add GitHub Top Languages for WakaTime
+        run: |
+          sed -i 's#<!--START_SECTION:top_lang-->.*<!--END_SECTION:top_lang-->#<!--START_SECTION:top_lang-->[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Quisui&hide=css,html&langs_count=6&theme=vue)](https://github.com/Quisui)<!--END_SECTION:top_lang-->#' README.md

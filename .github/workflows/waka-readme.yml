@@ -19,6 +19,9 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        
+      - name: INstall waka
+        run: npm install -g waka-readme-stats
 
       - name: Generate WakaTime stats
         run: npx waka-readme-stats --output README.md

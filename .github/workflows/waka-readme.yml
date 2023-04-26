@@ -23,13 +23,14 @@ jobs:
         run: npm install
 
       - name: Update README
-        uses: athul/waka-readme@v2.0.0
+        uses: athul/waka-readme@master
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
           SHOW_TITLE: true
           BLOCKS: |
-            <!--START_SECTION:waka-->
-            <!--END_SECTION:waka-->
+            ```text
+            coding_activity
+            ```
           TIME_RANGE: all_time
           SHOW_TIME: true
           SHOW_MASKED_TIME: true

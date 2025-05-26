@@ -25,3 +25,4 @@ Here are some ideas to get you started:
 [![Quisui's github stats](https://github-readme-stats.vercel.app/api?username=Quisui&show_icons=true&theme=vue)](https://github.com/Quisui)
 <!--END_SECTION:github_stats-->
 <!--END_SECTION:waka-->
+.
